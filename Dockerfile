@@ -1,6 +1,8 @@
 FROM amd64/ubuntu:latest
 EXPOSE 8085
 
+RUN apt-get update
+RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:savoury1/ffmpeg4
 RUN apt-get update
 RUN apt-get install -y wget
