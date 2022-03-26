@@ -4,6 +4,8 @@ EXPOSE 8085
 RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y unzip
+RUN apt-get install -y ffmpeg
+
 RUN mkdir -p /opt/hlsp
 VOLUME [ "/opt/hlsp" ]
 COPY index.sh .
