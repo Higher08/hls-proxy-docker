@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:latest
+FROM $TARGETARCH/ubuntu:latest
 EXPOSE 8085
 
 RUN apt-get update
