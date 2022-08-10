@@ -1,4 +1,4 @@
-FROM $TARGETARCH/ubuntu:latest
+FROM ubuntu:latest
 EXPOSE 8085
 
 RUN apt-get update
