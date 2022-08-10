@@ -1,6 +1,10 @@
 #!/bin/sh
 echo '------ DOWNLOADING HLS PROXY -------'
-wget https://www.hls-proxy.com/downloads/8.2.3/hls-proxy-8.2.3.linux-x64.zip -O /var/tmp/hlsproxy.zip
+if [ $(uname -m) == "x86_64" ]; then
+  wget https://www.hls-proxy.com/downloads/8.2.3/hls-proxy-8.2.3.linux-x64.zip -O /var/tmp/hlsproxy.zip
+else
+  wget https://www.hls-proxy.com/downloads/8.2.3/hls-proxy-8.2.3.linux-arm64.zip -O /var/tmp/hlsproxy.zip
+fi
 echo '------ UNZIP HLS PROXY -------'
 mkdir -p /var/tmp/hlsp/
 unzip -o /var/tmp/hlsproxy.zip -d /var/tmp/hlsp/
