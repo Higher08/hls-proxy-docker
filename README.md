@@ -5,13 +5,5 @@ This is a very simple docker, it doesn't do anything more than download HLS Prox
 
 ## Installation
 
-First `git clone` this repository, `cd` to the repo directory and run
-```bash
-docker-compose up --build -d
-```
-
-The proxy will be available on http://localhost:3080 or http://YOUR_WEB_SERVER:3080
-
-Configure Settings On The WEB UI
-
-More information at https://www.hls-proxy.com
+It has prebuilt image available at:
+ghcr.io/higher08/hls-proxy-docker:master
